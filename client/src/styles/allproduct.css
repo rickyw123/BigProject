@@ -1,0 +1,88 @@
+.allProducts {
+	padding: 20px 100px;
+}
+
+.allProducts .allProducts__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.allProducts .allProducts__header .allProducts__headerRight {
+	display: flex;
+	align-items: center;
+}
+
+.allProducts .allProducts__header .allProducts__headerRight form {
+	position: relative;
+	margin-right: 30px;
+}
+
+.allProducts .allProducts__header .allProducts__headerRight form input {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	outline: none;
+	text-align: center;
+	padding: 10px;
+}
+
+.allProducts .allProducts__header .allProducts__headerRight form svg {
+	font-size: 1.2em;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.allProducts .allProducts__header .allProducts__headerRight svg {
+	font-size: 1.4em;
+}
+
+.allProducts .allProducts__header .allProducts__headerRight a {
+	color: black;
+}
+
+.allProducts .allProducts__main {
+	display: flex;
+	height: 75vh;
+	max-height: 75vh;
+	margin-top: 40px;
+}
+
+.allProducts .allProducts__main .allProducts__mainLeft,
+.allProducts .allProducts__main .allProducts__mainRight {
+	flex: 2;
+	font-size: 13px;
+}
+
+.allProducts .allProducts__main .allProducts__mainLeft 
+p:first-child,
+.allProducts .allProducts__main .allProducts__mainRight p:first-child {
+	margin-bottom: 14px;
+	font-weight: bold;
+}
+
+.allProducts .allProducts__main .allProducts__mainLeft p:not(:first-child),
+.allProducts .allProducts__main .allProducts__mainRight p:not(:first-child) {
+	margin-bottom: 12px;
+}
+
+.allProducts .allProducts__main .allProducts__mainLeft {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.allProducts .allProducts__main .allProducts__mainRight {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.allProducts .allProducts__main .allProducts__mainMiddle {
+	flex: 6;
+	display: grid;
+	height: fit-content;
+	max-height: 75vh;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 30px;
+}

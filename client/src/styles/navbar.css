@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200&display=swap');
+
+.navbar {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 18px 40px;
+    height: 70px;
+}
+.navbar h1{
+    font-family: 'Assistant', sans-serif;
+    font-weight: 150;
+    font-size: 30px;
+}
+.navbar .navbar1 {
+    list-style: none;
+}
+
+.navbar .navbar1 a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Assistant', sans-serif;
+}
+
+.navbar .navbarhome a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Assistant', sans-serif;
+}
+
+.navbar .navbarhome a:hover{
+    color: red;
+    transition: 0.7s;
+}
+.navbar .navbar1 a:hover{
+    color: rgb(9, 255, 0);
+    transition: 0.8s;
+}
+
+@media (max-width: 600px) {
+    .navbar h1 {
+        font-size: 1.5em; 
+    }
+}

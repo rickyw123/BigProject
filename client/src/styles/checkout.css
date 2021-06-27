@@ -1,0 +1,66 @@
+.checkout {
+  padding: 30px 50px;
+}
+
+.checkout table {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.checkout table tr th,
+.checkout table tr td {
+  padding: 8px 0;
+}
+
+.checkout table tr button {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  width: 60px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  transition: 250ms;
+}
+
+.checkout table tr button:hover {
+  background-color: rgba(0,0,0,.8);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .modalBox {
+  width: 50%;
+  height: 500px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.modal .modalBox .modalHeader {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.modal .modalBox .modalHeader span {
+  cursor: pointer;
+}
+
+.modal .modalBox .modalContent {
+  overflow: auto;
+  padding: 12px;
+}

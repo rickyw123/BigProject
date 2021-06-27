@@ -1,0 +1,27 @@
+.dashboard {
+  display: flex;
+}
+
+.dashboard .dashboard__left {
+  flex: 2;
+  background-color: rgb(37, 37, 37);
+  height: 100vh;
+  max-height: 100vh;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.dashboard .dashboard__left .dashboard__companyName h2 {
+  color: #fff;
+  padding-left: 7px;
+  margin-bottom: 30px;
+}
+
+.dashboard .dashboard__right {
+  flex: 8;
+}
+
+.dashboard .dashboard__right .dashboard__rightContent {
+  padding: 20px;
+}

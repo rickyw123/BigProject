@@ -1,0 +1,94 @@
+.dashboardMenu__top,
+.dashboardMenu__singleLink {
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 150ms;
+}
+
+.dashboardMenu__top:hover,
+.dashboardMenu__singleLink:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
+
+.dashboardMenu:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.dashboardMenu .dashboardMenu__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.dashboardMenu .dashboardMenu__top .dashboardMenu__left {
+  display: flex;
+  align-items: center;
+}
+
+.dashboardMenu .dashboardMenu__top .dashboardMenu__left svg,
+.dashboardMenu .dashboardMenu__singleLink svg {
+  font-size: 1.2em;
+  margin-right: 10px;
+}
+
+.dashboardMenu .dashboardMenu__top .dashboardMenu__left p,
+.dashboardMenu .dashboardMenu__singleLink p {
+  font-size: 1.2em;
+}
+
+.dashboardMenu .dashboardMenu__top .dashboardMenu__right {
+  transition: transform 150ms;
+}
+
+.dashboardMenu .dashboardMenu__top .dashboardMenu__right--active {
+  transform: rotate(180deg);
+}
+
+.dashboardMenu .dashboardMenu__singleLink {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.dashboardMenu .dashboardMenu__bottom {
+  margin-top: 5px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 250ms;
+  height: 0;
+}
+
+.dashboardMenu .dashboardMenu__bottom .dashboardMenu__bottomLink {
+  color: #fff;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 30px;
+  transition: background 150ms;
+}
+
+.dashboardMenu .dashboardMenu__bottom .dashboardMenu__bottomLink:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
+
+.dashboardMenu
+  .dashboardMenu__bottom
+  .dashboardMenu__bottomLink:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.dashboardMenu .dashboardMenu__bottom .dashboardMenu__bottomLink svg {
+  margin-right: 10px;
+}
+
+.dashboardMenu .dashboardMenu__bottom--active {
+  transform: scaleY(1);
+  transform-origin: top;
+  opacity: 1;
+  height: 100%;
+}

@@ -1,0 +1,63 @@
+.productList {
+  margin-top: 20px;
+}
+
+.productList table {
+  width: 100%;
+}
+
+.productList table thead {
+  background-color: rgb(37, 37, 37);
+  color: #fff;
+}
+
+.productList table thead tr th,
+.productList table tbody tr td {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.productList table tbody tr:nth-child(odd) {
+  background-color: rgb(214, 214, 214);
+}
+
+.productList table tbody tr:nth-child(even) {
+  background-color: rgb(124, 124, 124);
+  color: #fff;
+}
+
+.productList table tbody tr:nth-child(odd):hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.productList table tbody tr:nth-child(even):hover {
+  background-color: rgb(150, 150, 150);
+}
+
+.productList table tbody tr td button {
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 5px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.productList table tbody tr td button:first-child {
+  background-color: orange;
+  transition: background 150ms;
+}
+
+.productList table tbody tr td button:first-child:hover {
+  background-color: rgb(255, 184, 52);
+}
+
+.productList table tbody tr td button:last-child {
+  background-color: orangered;
+  margin-left: 10px;
+  transition: background 150ms;
+}
+
+.productList table tbody tr td button:last-child:hover {
+  background-color: rgb(255, 97, 40);
+}
