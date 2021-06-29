@@ -6,10 +6,11 @@ export const cartReducers = (state = {cartItems: []}, action) => {
             const item = action.payload;
             const isExists = state.cartItems.find(ci => ci.productId === item.productId);
 
-            if (isExists) {
+            if (isExists) { // cek product apakah udah ada di cart atau belum
                 return {
                     ...state,
-                    cartItems: state.cartItems.map(ci => ci.productId === item.productId ? item : ci)
+                    cartItems: state.cartItems.map(ci => ci.productId === item.productId ? item : ci) 
+                    // looping semua data yang ada di cartItem, dan mencari produk di cart berdasarkan ID, kalau id nya sama, dia akan mengambil data baru (new qty), kalau enggak sama, tetap ambil data produk sebelumnya yang ada di cart
                 }
             } else {
                 return {
@@ -20,7 +21,7 @@ export const cartReducers = (state = {cartItems: []}, action) => {
         case REMOVE_ITEM_FROM_CART:
             return {
                 ...state,
-                cartItems: state.cartItems.filter(item => item.productId !== action.payload)
+                cartItems: state.cartItems.filter(item => item.productId !== action.payload) // === sama dengan !== tidak sama dengan
             }
         default:
             return state;

@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Roboto:wght@400;500&display=swap");
+
+.detailContainer {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.detailContainer .detailContainer-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailContainer svg {
+  font-size: 35px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  float: right;
+}
+
+.detailContainer .detailContainer-content .detailContainer-right {
+  margin-top: 20px;
+}
+
+.detailContainer .detailContainer-content .detailContainer-right h1 {
+  text-transform: capitalize;
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .detailContainer-price {
+  margin-top: 20px;
+  font-size: 20px;
+  /* font-weight: bold; */
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .detailContainer-description {
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .size-selector
+  .size {
+  font-size: 21px;
+  margin-top: 15px;
+}
+
+.detailContainer .detailContainer-content .detailContainer-right .size-main {
+  display: flex;
+  margin-top: 25px;
+  align-items: center;
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .size-main
+  .choosed-size {
+  cursor: pointer;
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .size-main
+  .size-list {
+  margin-left: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 280ms;
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .size-main
+  .size-list
+  > *
+  + * {
+  margin-left: 10px;
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .size-main
+  .size-list
+  button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .size-main
+  .size-list
+  button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .detailContainer-button {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100px;
+  height: 35px;
+  font-size: 15px;
+  margin-top: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .detailContainer-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(71, 71, 71);
+  z-index: -1;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 250ms;
+  transform-origin: left;
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .detailContainer-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.detailContainer
+  .detailContainer-content
+  .detailContainer-right
+  .size-main
+  .size-list.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.chatNowButton {
+  background-color: black;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+@media (min-width: 1000px) {
+  .detailContainer .detailContainer-content {
+    flex-direction: row !important;
+    padding: 100px;
+    align-items: center;
+  }
+
+  .slick-slider {
+    flex: 1 !important;
+    margin-right: 60px;
+    width: 200px;
+  }
+
+  .detailContainer .detailContainer-content .size-selector {
+    display: flex !important;
+    margin-top: 17px;
+  }
+
+  .detailContainer .detailContainer-content .size-selector .size-main {
+    margin-left: 15px;
+    margin-top: 13px;
+  }
+
+  .slick-slider img {
+    width: 400px;
+    /* height: auto; */
+  }
+
+  .detailContainer-description {
+    width: 85%;
+  }
+  .detailContainer {
+    margin-bottom: 50px;
+  }
+
+  .detailContainer .detailContainer-content .detailContainer-right {
+    flex: 2;
+  }
+
+  .detailContainer-main {
+    display: flex;
+  }
+
+  .detailContainer .detailContainer-main .detailContainer-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 90px;
+    background-color: #fff !important;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+}

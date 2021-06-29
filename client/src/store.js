@@ -6,7 +6,6 @@ import { productReducers, getAllProductsReducer } from './reducers/productReduce
 import {cartReducers} from './reducers/cartReducer';
 import {transactionReducer, getUserTransactionsReducer} from './reducers/transactionReducers';
 
-// setelah bikin reducer harus ke store buat simpan reducer
 
 const reducers = combineReducers({
     auth: authReducer,

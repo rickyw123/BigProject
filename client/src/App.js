@@ -6,19 +6,22 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import MainPage from './pages/MainPage'
 import AllProducts from './pages/AllProducts';
-import ProductDetail from './pages/ProductDetail';
 import Dashboard from './pages/Dashboard';
 import ProductList from './pages/ProductList';
 import AddProduct from './pages/AddProduct';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
+import ProtectedRoute from './Components/ProtectedRoute';
+import ProductDetail from './pages/ProductDetail';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(loadUser()); // /me
+    dispatch(loadUser()); // supaya setiap kali browser direfresh, user data enggak hilang
   }, [dispatch]);
+
+  // yang harus pakai reducer -> panggil API (register, login, addProduct, dsb)
 
   return (
     <Router>
@@ -27,10 +30,10 @@ function App() {
         <Route exact path='/login' component={Login}/>
         <Route exact path='/register' component={Register} />
         <Route exact path='/products' component={AllProducts} />
-        <Route exact path='/product/detail/:id' component={ProductDetail} />
-        <Route exact path='/dashboard' component={Dashboard} />
-        <Route exact path='/admin/products' component={ProductList} />
-        <Route exact path='/admin/product/add' component={AddProduct} />
+        <Route exact path='/detail/:id' component={ProductDetail} />
+        <ProtectedRoute isAdmin={true}  exact path='/dashboard' component={Dashboard} />
+        <ProtectedRoute isAdmin={true} exact path='/admin/products' component={ProductList} />
+        <ProtectedRoute isAdmin={true} exact path='/admin/product/add' component={AddProduct} />
         <Route exact path='/cart' component={Cart} />
         <Route exact path='/checkout' component={Checkout} />
       </Switch>
